@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<style>
+
+    h12{
+        text-align:center;
+        padding:23px;
+        background-color:skyblue;
+        color:white;
+    }
+
+    #clear{
+        width:90px;
+        border:3px solid gray;
+            border-radius:30px;
+            padding:20px;
+            background-color:rgb(9, 0, 134);
+    }
+
+    #equal{
+        width:80px;
+        border:3px solid gray;
+            border-radius:30px;
+            padding:20px;
+            background-color:rgb(25, 134, 0);
+    }
+    .formstyle
+    {
+        width:300px;
+        height:625px;
+        margin:auto;
+        border:30px solid rgb(0, 0, 0, 0.4);
+        border-radius:20px;
+        padding:20px;
+    }
+
+    input
+    {
+        width:20px;
+        background-color:rgb(128, 0, 6);
+        color:white;
+        border:3px solid gray;
+            border-radius:50px;
+            padding:26px;
+            margin:5px;
+            font-size:15px;
+    }
+
+    #calc
+    {
+    width:250px;
+    border:5px solid black;
+    background-color: rgb(67, 255, 183);
+        border-radius:30px;
+        padding:20px;
+        margin:auto;
+    }
+</style>
+
+
+
+</head>
+<body>
+
+    <h1> Creating a  Calcultor Program using JavaScript</h1>
+    <div class="formstyle">
+        <form name="form1">
+
+        <input id="calc" type="text" name="answer" placeholder="Enter value..." > <br><br>
+
+
+        <input type="button" value="1" onclick="form1.amswer.value+='1'">
+        <input type="button" value="2" onclick="form1.answer.value+='2'">
+        <input type="button" value="3" onclick="form1.answer.value+='3'">
+        <input type="button" value="+" onclick="form1.answer.value+='+'">
+        <br><br>
+
+        <input type="button" value="4" onclick="form1.answer.value+='4'">
+        <input type="button" value="5" onclick="form1.answer.value+='5'">
+        <input type="button" value="6" onclick="form1.answer.value+='6'">
+        <input type="button" value="-" onclick="form1.answer.value+='-'">
+        <br><br>
+
+        <input type="button" value="7" onclick="form1.answer.value+='7'">
+        <input type="button" value="8" onclick="form1.answer.value+='8'">
+        <input type="button" value="9" onclick="form1.answer.value+='9'">
+        <input type="button" value="*" onclick="form1.answer.value+='*'">
+        <br><br>
+
+        <input type="button" value="/" onclick="form1.answer.value+='/'">
+        <input type="button" value="0" onclick="form1.answer.value+='0'">
+        <input  type="button" value="." onclick="form1.answer.value+='.'">
+        <br><br>
+
+        <input id="equal" type="button" value="=" onclick="form1.answer.value = eval(form1.answer.value)">
+        
+        <input type ="button" value = "Clear All" onclick="form1.answer.value=''" id="clear">
+        
+
+        <input id="clear" type="button" value="Delete" onclick="cancel()"> </button>
+
+        
+        </form>
+        </div>
+
+        <script>
+            var val=document.getElementById("calc");
+            function cancel() {
+                val.value=val.value.substr(0,val.value.length-1);
+            }
+        </script>
+        </body>
+        </html>
+
+    </div>
+
+
+    
+</body>
+</html>
